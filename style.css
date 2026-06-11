@@ -1,0 +1,1082 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* CORES E FONTES */
+
+:root{
+
+  --cor-principal: #a67c2e;
+
+  --cor-texto: #ffffff;
+
+  --cor-overlay: rgba(0,0,0,0.45);
+
+  --cor-navbar:rgba (255, 235, 205, 0.9);
+
+  --cor-link: #333333;
+
+  --cor-fundo: #fdf5e6;
+
+  --cor-cards: #ffffff;
+  
+  --cor-desafios: #f8f6f1;
+  
+  --cor-solucoes: #fffafo;
+  
+  --cor-simulador: #f8f6f1;
+  
+  --cor-rodape: #a67c2e;
+
+  --fonte-principal: 'Poppins', sans-serif;
+
+}
+
+/* CONFIGURAÇÕES GERAIS */
+
+*{
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+}
+
+/* CORPO DO SITE */
+
+body{
+  
+  font-family: var(--fonte-principal);
+  
+}
+  
+html{
+    
+    scroll-behavior: smooth;
+  
+}
+
+/* HOME */
+
+.hero{
+
+  height: 100vh;
+
+  background-image: url("https://images.unsplash.com/photo-1500382017468-9049fed747ef");
+
+  background-size: cover;
+
+  background-position: center;
+
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+}
+
+/* CAMADA ESCURA */
+
+.overlay{
+
+  position: absolute;
+
+  width: 100%;
+
+  height: 100%;
+
+  background-color: var(--cor-overlay);
+
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+.hero-content{
+
+  position: relative;
+
+  z-index: 2;
+
+  color: var(--cor-texto);
+
+}
+
+/* TÍTULO */
+
+.hero h1{
+
+  font-size: 100px;
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+
+}
+
+/* SUBTÍTULO */
+
+.hero p{
+
+  font-size: 22px;
+
+  margin-bottom: 30px;
+
+}
+
+/* BOTÃO */
+
+.explore-btn{
+
+  padding: 15px 35px;
+
+  border: none;
+
+  border-radius: 40px;
+
+  background-color: var(--cor-principal);
+
+  color: white;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+}
+
+/* BARRA DE NAVEGAÇÃO */
+
+.navbar{
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 20px 50px;
+
+  background-color: var(--cor-navbar);
+  
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+  
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  
+  backdrop-filter: blur(8px)
+
+}
+
+/* LOGO */
+
+.logo{
+
+  color: var(--cor-principal);
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+}
+
+/* MENU */
+
+.menu{
+
+  display: flex;
+
+  list-style: none;
+
+  gap: 30px;
+
+}
+
+/* LINKS */
+
+.menu a{
+
+  text-decoration: none;
+
+  color: var(--cor-link);
+
+  font-weight: 500;
+
+  position: relative;
+
+  transition: color 0.3s ease;
+
+}
+
+/* ANIMAÇÃO DOS LINKS */
+
+.menu a::after{
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -5px;
+
+  width: 0;
+
+  height: 3px;
+
+  background-color: var(--cor-principal);
+
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+
+}
+
+.menu a:hover{
+
+  color: var(--cor-principal);
+
+}
+
+.menu a:hover::after{
+
+  width: 100%;
+
+}
+/* SEÇÃO DESAFIOS */
+
+#desafios{
+
+  padding: 100px 50px;
+  background-color: var(--cor-desafios);
+
+}
+
+
+/* TÍTULO DOS DESAFIOS */
+
+#desafios h2{
+
+  text-align: center;
+
+  font-size: 72px;
+
+  font-weight: 700;
+  
+  color: var(--cor-principal);
+  
+  margin-bottom: 15px;
+
+}
+
+/* LINHA DECORATIVA */
+
+#desafios h2::after{
+
+  content: "";
+
+  display: block;
+
+  width: 120px;
+
+  height: 4px;
+
+  background-color: var(--cor-principal);
+
+  margin: 15px auto 0;
+
+  border-radius: 10px;
+
+}
+
+/* DESCRIÇÃO DA SEÇÃO DESAFIOS*/
+
+.descricao-secao{
+
+  text-align: center;
+
+  font-size: 1.2rem;
+
+  max-width: 700px;
+
+  margin: 0 auto 15px auto;
+
+  color: #555;
+
+}
+
+/* FONTE DAS INFORMAÇÕES */
+
+.fonte{
+
+  text-align: center;
+
+  font-size: 0.8rem;
+
+  color: #888;
+
+  margin-bottom: 40px;
+
+  font-style: italic;
+
+}
+
+/* ÁREA DOS CARDS */
+
+.cards-desafios{
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  flex-wrap: wrap;
+
+}
+
+/* CARD */
+
+.card{
+
+  width: 360px;
+
+  padding: 25px;
+
+  border-radius: 15px;
+
+  background-color: var(--cor-cards);
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+  transition: 0.3s;
+  
+  min-height: 450px;
+
+}
+
+.card h3{
+  font-size: 24px;
+  
+}
+
+.card p{
+  
+  font-size: 19px;
+
+  line-height: 1.6;
+
+  color: #555;
+
+}
+
+.card:hover{
+
+  transform: translateY(-8px);
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+}
+
+/*IMAGEM DOS CARDS*/
+
+.card-image{
+
+width: 100%;
+
+height: 180px;
+
+border-radius: 10px;
+
+margin-bottom: 20px;
+
+background-color: #d9d9d9;
+  
+object-fit: cover;
+
+}
+
+/* SEÇÃO SOLUÇÕES */
+
+#solucoes{
+
+  padding: 100px 50px;
+
+  background-color: var(--cor-solucoes);
+
+}
+
+/* TÍTULO DAS SOLUÇÕES */
+
+#solucoes h2{
+
+  text-align: center;
+
+  font-size: 72px;
+
+  font-weight: 700;
+
+  color: var(--cor-principal);
+
+  margin-bottom: 15px;
+
+}
+
+/*LINHA DECORATIVA*/
+
+#solucoes h2::after{
+
+  content: "";
+
+  display: block;
+
+  width: 120px;
+
+  height: 4px;
+
+  background-color: var(--cor-principal);
+
+  margin: 15px auto 0;
+
+  border-radius: 10px;
+
+}
+
+/*CARDS DAS SOLUÇÕES*/
+
+.cards-solucoes{
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  flex-wrap: wrap;
+
+}
+
+/*SEÇÃO SIMULADOR */
+
+#simulador{
+
+  background-color: var(--cor-simulador);
+
+  padding: 70px 50px;
+
+  text-align: center;
+
+}
+
+/* TÍTULO */
+
+#simulador h2{
+
+  font-size: 72px;
+
+  font-weight: 700;
+
+  color: var(--cor-principal);
+
+  margin-bottom: 15px;
+
+}
+
+#simulador h2::after{
+
+  content: "";
+
+  display: block;
+
+  width: 120px;
+
+  height: 4px;
+
+  margin: 15px auto 0;
+
+  border-radius: 10px;
+
+  background-color: var(--cor-principal);
+
+}
+
+/* DESCRIÇÃO */
+
+#simulador .descricao-secao{
+
+  max-width: 700px;
+
+  margin: 0 auto 40px;
+
+}
+
+/* CAIXA PRINCIPAL */
+
+.simulador-box{
+
+  max-width: 900px;
+
+  margin: 40px auto;
+
+  padding: 40px;
+
+  background-color: white;
+
+  border-radius: 25px;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+}
+
+/* GRUPOS DE OPÇÕES */
+
+.grupo-opcoes{
+
+  display: inline-block;
+
+  width: 40%;
+
+  margin: 15px;
+
+  vertical-align: top;
+
+  text-align: left;
+
+}
+
+.grupo-opcoes h3{
+
+  margin-bottom: 20px;
+
+  color: var(--cor-principal);
+
+}
+
+/* BOTÕES DE ESCOLHA */
+
+.opcao-card{
+
+  display: block;
+
+  margin-bottom: 15px;
+
+}
+
+.opcao-card input{
+
+  margin-right: 10px;
+
+}
+
+.opcao-card span{
+
+  display: block;
+
+  padding: 15px;
+
+  border-radius: 15px;
+
+  background-color: #f5f5f5;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+}
+
+.opcao-card span:hover{
+
+  background-color: #ececec;
+
+  transform: translateY(-3px);
+
+}
+
+/* BOTÃO */
+
+#btn-simular{
+
+  margin-top: 30px;
+
+  padding: 15px 35px;
+
+  border: none;
+
+  border-radius: 40px;
+
+  background-color: var(--cor-principal);
+
+  color: white;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+}
+
+#btn-simular:hover{
+
+  transform: scale(1.05);
+
+}
+
+/* RESULTADO */
+
+#resultado{
+
+  max-width: 1000px;
+
+  margin: 30px auto 0;
+
+}
+/* RESULTADOS DO SIMULADOR */
+
+.resultado-cards{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:25px;
+
+  flex-wrap:wrap;
+
+  margin-top:40px;
+
+}
+
+.resultado-card{
+
+  width:280px;
+
+  background:white;
+
+  border-radius:20px;
+
+  padding:25px;
+
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+
+  text-align:center;
+
+}
+
+.resultado-card h4{
+
+  font-size:22px;
+
+  color:var(--cor-principal);
+
+  margin-bottom:15px;
+
+}
+
+.valor{
+
+  font-size:32px;
+
+  font-weight:700;
+
+  margin-bottom:10px;
+
+}
+
+.explicacao{
+
+  font-size:14px;
+
+  color:#666;
+
+  margin-bottom:20px;
+
+  line-height:1.5;
+
+}
+
+.barra{
+
+  width:100%;
+
+  height:15px;
+
+  background:#e5e5e5;
+
+  border-radius:30px;
+
+  overflow:hidden;
+
+}
+
+.preenchimento{
+
+  height:100%;
+  
+  WIDTH:0;
+
+  background:var(--cor-principal);
+
+  border-radius:30px;
+
+  transition:width 1.5s ease;
+
+}
+
+/*COR DA BARRA DA RESPOSTA*/
+
+.gases{
+
+  background-color: #8a99a8;
+
+}
+
+.agua{
+
+  background-color: #4a90e2;
+
+}
+
+.solo{
+
+  background-color: #5fa86b;
+
+}
+
+/* RODAPÉ */
+
+#rodape{
+
+  background-color: var(--cor-rodape);
+
+  padding: 5px 20px;
+
+  text-align: center;
+
+}
+
+/* TÍTULO */
+
+#rodape h2{
+
+  color: white;
+
+  font-size: 36px;
+
+  margin-bottom: 15px;
+
+}
+
+/* DESCRIÇÃO */
+
+.descricao-rodape{
+
+  color: #white;
+
+  margin-bottom: 30px;
+
+  font-size: 18px;
+
+}
+
+/* FONTES */
+
+.fontes h3{
+
+  color: var(--cor-principal);
+
+  margin-bottom: 10px;
+
+}
+
+.fontes p{
+
+  color: #white;
+
+  max-width: 700px;
+
+  margin: 0 auto 30px auto;
+
+  line-height: 1.6;
+
+}
+
+/* CRÉDITOS */
+
+.creditos{
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 14px;
+
+  border-top: 1px solid #ddd;
+
+  padding-top: 20px;
+
+}
+
+#rodape h2::after{
+
+  content: "";
+
+  display: block;
+
+  width: 80px;
+
+  height: 4px;
+
+  background-color: var(--cor-texto);
+
+  margin: 12px auto 0;
+
+  border-radius: 10px;
+
+}
+
+.lista-fontes{
+
+  list-style-position: inside;
+
+  text-align: center;
+
+  color: white;
+
+  line-height: 2;
+
+  margin-bottom: 20px;
+
+}
+
+.aviso-simulador{
+
+  color: rgba(255,255,255,0.85);
+
+  font-size: 14px;
+
+  font-style: italic;
+
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px){
+
+  .hero h1{
+
+    font-size: 60px;
+
+  }
+
+  .hero p{
+
+    font-size: 18px;
+
+    padding: 0 20px;
+
+  }
+
+}
+
+/* RESPONSIVIDADE GERAL */
+
+@media (max-width: 768px){
+
+  /* NAVBAR */
+
+  .navbar{
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .menu{
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* TÍTULOS DAS SEÇÕES */
+
+  #desafios h2,
+  #solucoes h2,
+  #simulador h2{
+    font-size: 42px;
+  }
+
+  /* CAIXAS */
+
+  .simulador-box{
+    padding: 25px;
+  }
+
+  .grupo-opcoes{
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /* CARDS */
+
+  .card,
+  .resultado-card{
+    width: 100%;
+    max-width: 350px;
+  }
+
+}
+
+/* ACESSIBILIDADE */
+.acessibilidade{
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  trasform: translateY(-50%);
+  display: flex;
+  flex-direction:column;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.acessibilidade button{
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: #white;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,.2);
+  transition: .3s;
+}
+
+.acessibilidade button:hover{
+  transform: scale(1.1);
+}
+
+/* MODO ESCURO */
+.dark-mode{
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+
+.dark-mode header,
+.dark-mode section,
+.dark-mode footer,
+.dark-mode nav,
+.dark-mode .card,
+.dark-mode .container{
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode p,
+.dark-mode span,
+.dark-mode li{
+  color: #ffffff !important;
+}
+
+/* CARD SAF */
+
+.saf-card{
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 35px;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    background: white;
+    border-radius: 25px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+
+    transition: all .4s ease;
+}
+
+.saf-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.15);
+}
+
+.saf-content{
+    flex: 1;
+}
+
+.saf-tag{
+    display: inline-block;
+
+    background: #e8f5e9;
+    color: #2e7d32;
+
+    padding: 8px 15px;
+    border-radius: 30px;
+
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.saf-content h2{
+    margin: 20px 0;
+}
+
+.saf-content p{
+    line-height: 1.8;
+}
+
+.saf-beneficios{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.saf-beneficios span{
+    background: #f5f5f5;
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+
+.saf-frase{
+    margin-top: 25px;
+    font-style: italic;
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.saf-image{
+    flex: 1;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.saf-image{
+    flex: 1;
+    display: flex;
+}
+
+.saf-image img{
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+    transition: .5s;
+}
+
+.saf-card:hover .saf-image img{
+    transform: scale(1.08);
+}
+
